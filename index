@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agrotec Sustentável</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f5f5;
+    color:#333;
+}
+
+header{
+    background:#1f7a3f;
+    color:#fff;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+}
+
+.logo{
+    font-size:1.4rem;
+    font-weight:700;
+}
+
+.menu{
+    display:flex;
+    gap:25px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#c5f3d0;
+}
+
+.hero{
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+    url("https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=1600");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content{
+    max-width:700px;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#2bbf5b;
+    color:white;
+    padding:14px 30px;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#1f9e48;
+}
+
+section{
+    padding:100px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.titulo{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.titulo h2{
+    color:#1f7a3f;
+    font-size:2.3rem;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card h3{
+    color:#1f7a3f;
+    margin-bottom:10px;
+}
+
+.sobre{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.sobre img{
+    width:100%;
+    border-radius:15px;
+}
+
+.contato{
+    background:white;
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input, textarea{
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+button{
+    background:#1f7a3f;
+    color:white;
+    border:none;
+    padding:14px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#176231;
+}
+
+footer{
+    background:#1f7a3f;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    .menu{
+        gap:15px;
+        font-size:.9rem;
+    }
+
+    .sobre{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">🌱 Agrotec Sustentável</div>
+
+        <nav class="menu">
+            <a href="#inicio">Início</a>
+            <a href="#comedouro">Comedouro</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero" id="inicio">
+    <div class="hero-content">
+        <h1>Tecnologia e Sustentabilidade no Campo</h1>
+        <p>
+            Soluções inteligentes para alimentação animal,
+            agricultura sustentável e inovação rural.
+        </p>
+        <a href="#comedouro" class="btn">Conhecer Projeto</a>
+    </div>
+</section>
+
+<section id="comedouro">
+    <div class="container">
+
+        <div class="titulo">
+            <h2>Comedouro Sustentável</h2>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?q=80&w=1200">
+                <div class="card-content">
+                    <h3>Economia de Ração</h3>
+                    <p>
+                        Reduz desperdícios e melhora a eficiência
+                        alimentar dos animais.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=1200">
+                <div class="card-content">
+                    <h3>Material Sustentável</h3>
+                    <p>
+                        Construído com foco em durabilidade e
+                        responsabilidade ambiental.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200">
+                <div class="card-content">
+                    <h3>Alta Durabilidade</h3>
+                    <p>
+                        Estrutura resistente para uso em áreas rurais
+                        e ambientes externos.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="sobre">
+    <div class="container">
+
+        <div class="titulo">
+            <h2>Sobre o Projeto</h2>
+        </div>
+
+        <div class="sobre">
+
+            <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200">
+
+            <div>
+                <h3 style="color:#1f7a3f;margin-bottom:15px;">
+                    Inovação Rural
+                </h3>
+
+                <p>
+                    O projeto Agrotec Sustentável busca integrar
+                    tecnologia e práticas ecológicas para promover
+                    eficiência produtiva, redução de desperdícios
+                    e maior qualidade de vida no campo.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="contato">
+    <div class="container">
+
+        <div class="titulo">
+            <h2>Entre em Contato</h2>
+        </div>
+
+        <div class="contato">
+            <form>
+
+                <input type="text" placeholder="Seu nome">
+
+                <input type="email" placeholder="Seu e-mail">
+
+                <textarea rows="5" placeholder="Digite sua mensagem"></textarea>
+
+                <button type="submit">
+                    Enviar Mensagem
+                </button>
+
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Agrotec Sustentável - Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
