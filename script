@@ -1,0 +1,43 @@
+// Espera o carregamento do DOM
+document.addEventListener("DOMContentLoaded", function() {
+
+    // Rolagem suave para todos os links do menu
+    const menuLinks = document.querySelectorAll('.menu a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function(e){
+            e.preventDefault();
+            const targetID = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetID);
+            if(targetSection){
+                // Ajusta o scroll considerando o header fixo
+                window.scrollTo({
+                    top: targetSection.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Efeito de sombra no header ao rolar a página
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', function(){
+        if(window.scrollY > 50){
+            header.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
+        } else {
+            header.style.boxShadow = 'none';
+        }
+    });
+
+    // Efeito hover nos cards (opcional)
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-10px)';
+            card.style.transition = 'transform 0.3s';
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0)';
+        });
+    });
+
+});
